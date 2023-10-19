@@ -6,6 +6,12 @@ const count = ref(0)
 function increment() {
   count.value++
 }
+
+const text = ref('')
+
+function onInput(e: Event) {
+  text.value = (e?.target as HTMLInputElement).value
+}
 </script>
 
 <template>
@@ -20,6 +26,15 @@ function increment() {
       >
         Count is: {{ count }}
       </button>
+    </div>
+    <div class="p-10">
+      <input
+        :value="text"
+        @input="onInput"
+        placeholder="Type here"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5"
+      />
+      <p>{{ text }}</p>
     </div>
   </div>
 </template>
