@@ -6,6 +6,8 @@ import TodoList from './components/TodoList.vue'
 import OnMounted from './components/OnMounted.vue'
 import Fetch from './components/Fetch.vue'
 import DefineProps from './components/DefineProps.vue'
+import Slots from './components/Slots.vue'
+
 import { ref } from 'vue'
 
 const title = ref('heading')
@@ -36,6 +38,9 @@ const title = ref('heading')
     </div>
     <div class="p-10 border rounded-lg mb-2">
       <DefineProps :msg="title" />
+    </div>
+    <div class="p-10 border rounded-lg mb-2">
+      <Slots>Something</Slots>
     </div>
   </div>
 </template>
