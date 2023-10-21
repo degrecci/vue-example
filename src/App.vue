@@ -5,6 +5,10 @@ import Count from './components/Count.vue'
 import TodoList from './components/TodoList.vue'
 import OnMounted from './components/OnMounted.vue'
 import Fetch from './components/Fetch.vue'
+import DefineProps from './components/DefineProps.vue'
+import { ref } from 'vue'
+
+const title = ref('heading')
 </script>
 
 <template>
@@ -29,6 +33,9 @@ import Fetch from './components/Fetch.vue'
     </div>
     <div class="p-10 border rounded-lg mb-2">
       <Fetch />
+    </div>
+    <div class="p-10 border rounded-lg mb-2">
+      <DefineProps :msg="title" />
     </div>
   </div>
 </template>
