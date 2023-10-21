@@ -1,6 +1,7 @@
 <script setup>
 import { ref, computed } from 'vue'
 import Button from './Button.vue'
+import Input from './Input.vue'
 
 let id = 0
 
@@ -27,10 +28,7 @@ function removeTodo(todo) {
 
 <template>
   <form @submit.prevent="addTodo">
-    <input
-      v-model="newTodo"
-      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 mr-2"
-    />
+    <Input v-model="newTodo" placeholder="Type todo" class="mr-4" />
     <Button>Add Todo</Button>
   </form>
   <ul class="w-1/4 my-4">

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Toggle from './components/Toggle.vue'
-import Input from './components/Input.vue'
+import TextInput from './components/TextInput.vue'
 import Count from './components/Count.vue'
 import TodoList from './components/TodoList.vue'
 import OnMounted from './components/OnMounted.vue'
@@ -22,7 +22,7 @@ const title = ref('heading')
       <Count />
     </div>
     <div class="p-10 border rounded-lg mb-2">
-      <Input />
+      <TextInput />
     </div>
     <div class="p-10 border rounded-lg mb-2">
       <Toggle />
