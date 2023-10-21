@@ -4,6 +4,7 @@ import Input from './components/Input.vue'
 import Count from './components/Count.vue'
 import TodoList from './components/TodoList.vue'
 import OnMounted from './components/OnMounted.vue'
+import Fetch from './components/Fetch.vue'
 </script>
 
 <template>
@@ -25,6 +26,9 @@ import OnMounted from './components/OnMounted.vue'
     </div>
     <div class="p-10 border rounded-lg mb-2">
       <OnMounted />
+    </div>
+    <div class="p-10 border rounded-lg mb-2">
+      <Fetch />
     </div>
   </div>
 </template>
