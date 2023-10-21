@@ -31,9 +31,7 @@ function removeTodo(todo) {
       v-model="newTodo"
       class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 mr-2"
     />
-    <Button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-      Add Todo
-    </Button>
+    <Button>Add Todo</Button>
   </form>
   <ul class="w-1/4 my-4">
     <li
@@ -43,12 +41,7 @@ function removeTodo(todo) {
     >
       <input type="checkbox" v-model="todo.done" />
       <span :class="{ 'line-through': todo.done }">{{ todo.text }}</span
-      ><button
-        @click="removeTodo(todo)"
-        class="ml-2 bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-3 rounded"
-      >
-        X
-      </button>
+      ><Button @click="removeTodo(todo)" variant="small"> X </Button>
     </li>
   </ul>
   <Button @click="hideCompleted = !hideCompleted">
