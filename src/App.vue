@@ -3,6 +3,7 @@ import Toggle from './components/Toggle.vue'
 import Input from './components/Input.vue'
 import Count from './components/Count.vue'
 import TodoList from './components/TodoList.vue'
+import OnMounted from './components/OnMounted.vue'
 </script>
 
 <template>
@@ -21,6 +22,9 @@ import TodoList from './components/TodoList.vue'
     </div>
     <div class="p-10 border rounded-lg mb-2">
       <TodoList />
+    </div>
+    <div class="p-10 border rounded-lg mb-2">
+      <OnMounted />
     </div>
   </div>
 </template>
