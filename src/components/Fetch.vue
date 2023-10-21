@@ -17,7 +17,12 @@ watch(todoId, fetchData)
 
 <template>
   <p>Todo id: {{ todoId }}</p>
-  <button @click="todoId++">Fetch next todo</button>
+  <button
+    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-4"
+    @click="todoId++"
+  >
+    Fetch next todo
+  </button>
   <p v-if="!todoData">Loading...</p>
-  <pre v-else>{{ todoData }}</pre>
+  <pre class="border rounded-lg" v-else>{{ todoData }}</pre>
 </template>
