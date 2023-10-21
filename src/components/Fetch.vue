@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
+import Button from './Button.vue'
 
 const todoId = ref(1)
 const todoData = ref(null)
@@ -17,12 +18,12 @@ watch(todoId, fetchData)
 
 <template>
   <p>Todo id: {{ todoId }}</p>
-  <button
+  <Button
     class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-4"
     @click="todoId++"
   >
     Fetch next todo
-  </button>
+  </Button>
   <p v-if="!todoData">Loading...</p>
   <pre class="border rounded-lg" v-else>{{ todoData }}</pre>
 </template>

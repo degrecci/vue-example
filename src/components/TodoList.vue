@@ -1,5 +1,6 @@
 <script setup>
 import { ref, computed } from 'vue'
+import Button from './Button.vue'
 
 let id = 0
 
@@ -30,9 +31,9 @@ function removeTodo(todo) {
       v-model="newTodo"
       class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 mr-2"
     />
-    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+    <Button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
       Add Todo
-    </button>
+    </Button>
   </form>
   <ul class="w-1/4 my-4">
     <li
@@ -50,10 +51,7 @@ function removeTodo(todo) {
       </button>
     </li>
   </ul>
-  <button
-    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-    @click="hideCompleted = !hideCompleted"
-  >
+  <Button @click="hideCompleted = !hideCompleted">
     {{ hideCompleted ? 'Show all' : 'Hide completed' }}
-  </button>
+  </Button>
 </template>
