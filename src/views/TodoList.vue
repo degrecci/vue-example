@@ -1,7 +1,7 @@
 <script setup>
 import { ref, computed } from 'vue'
-import Button from './Button.vue'
-import Input from './Input.vue'
+import Button from '@/components/Button.vue'
+import Input from '@/components/Input.vue'
 
 let id = 0
 
