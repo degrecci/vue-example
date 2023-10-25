@@ -1,7 +1,7 @@
-<script setup>
+<script setup lang="ts">
 import { ref, onMounted } from 'vue'
 
-const pElementRef = ref(null)
+const pElementRef = ref()
 
 onMounted(() => {
   pElementRef.value.textContent = 'mounted!'

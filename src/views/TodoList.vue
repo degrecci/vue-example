@@ -1,13 +1,19 @@
-<script setup>
+<script setup lang="ts">
 import { ref, computed } from 'vue'
 import Button from '@/components/Button.vue'
 import Input from '@/components/Input.vue'
+
+type Todo = {
+  id: number
+  text: string
+  done: boolean
+}
 
 let id = 0
 
 const hideCompleted = ref(false)
 const newTodo = ref('')
-const todos = ref([
+const todos = ref<Array<Todo>>([
   { id: id++, text: 'Vue', done: true },
   { id: id++, text: 'React', done: false }
 ])
@@ -21,7 +27,7 @@ function addTodo() {
   newTodo.value = ''
 }
 
-function removeTodo(todo) {
+function removeTodo(todo: Todo) {
   todos.value = todos.value.filter((t) => t !== todo)
 }
 </script>
