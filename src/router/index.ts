@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import CountView from '@/views/CountView.vue'
 import DefinePropsView from '@/views/DefinePropsView.vue'
 import FetchView from '@/views/FetchView.vue'
+import FormView from '@/views/FormView.vue'
 import OnMountedView from '@/views/OnMountedView.vue'
 import SlotsView from '@/views/SlotsView.vue'
 import TextInputView from '@/views/TextInputView.vue'
@@ -18,7 +19,8 @@ const routes = [
   { path: '/fetch', component: FetchView },
   { path: '/define-props', component: DefinePropsView },
   { path: '/slots', component: SlotsView },
-  { path: '/toggle', component: ToogleView }
+  { path: '/toggle', component: ToogleView },
+  { path: '/form', component: FormView }
 ]
 
 export const router = createRouter({

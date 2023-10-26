@@ -31,6 +31,9 @@ const liClasses = 'text-2xl text-white my-2 font-bold'
       <li :class="liClasses">
         <RouterLink to="/toggle">toggle</RouterLink>
       </li>
+      <li :class="liClasses">
+        <RouterLink to="/form">form</RouterLink>
+      </li>
     </ul>
   </aside>
 </template>
