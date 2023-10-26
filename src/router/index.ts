@@ -1,24 +1,24 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import Count from '@/views/Count.vue'
-import DefineProps from '@/views/DefineProps.vue'
-import Fetch from '@/views/Fetch.vue'
-import OnMounted from '@/views/OnMounted.vue'
-import Slots from '@/views/Slots.vue'
-import TextInput from '@/views/TextInput.vue'
-import TodoList from '@/views/TodoList.vue'
-import Toggle from '@/views/Toggle.vue'
+import CountView from '@/views/CountView.vue'
+import DefinePropsView from '@/views/DefinePropsView.vue'
+import FetchView from '@/views/FetchView.vue'
+import OnMountedView from '@/views/OnMountedView.vue'
+import SlotsView from '@/views/SlotsView.vue'
+import TextInputView from '@/views/TextInputView.vue'
+import TodoListView from '@/views/TodoListView.vue'
+import ToogleView from '@/views/ToogleView.vue'
 
 const routes = [
   // { path: '/', component: Home },
-  { path: '/text-input', component: TextInput },
-  { path: '/count', component: Count },
-  { path: '/todo-list', component: TodoList },
-  { path: '/on-mounted', component: OnMounted },
-  { path: '/fetch', component: Fetch },
-  { path: '/define-props', component: DefineProps },
-  { path: '/slots', component: Slots },
-  { path: '/toggle', component: Toggle }
+  { path: '/text-input', component: TextInputView },
+  { path: '/count', component: CountView },
+  { path: '/todo-list', component: TodoListView },
+  { path: '/on-mounted', component: OnMountedView },
+  { path: '/fetch', component: FetchView },
+  { path: '/define-props', component: DefinePropsView },
+  { path: '/slots', component: SlotsView },
+  { path: '/toggle', component: ToogleView }
 ]
 
 export const router = createRouter({
