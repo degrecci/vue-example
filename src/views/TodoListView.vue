@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import Button from '@/components/v-button.vue'
-import Input from '@/components/v-input.vue'
+import Button from '@/components/VueButton.vue'
+import Input from '@/components/VueInput.vue'
 
 type Todo = {
   id: number
