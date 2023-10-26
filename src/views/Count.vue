@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import Button from '@/components/Button.vue'
+import Button from '@/components/v-button.vue'
 
 const count = ref(0)
 

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
-import Button from '@/components/Button.vue'
+import Button from '@/components/v-button.vue'
 
 const todoId = ref(1)
 const todoData = ref(null)
