@@ -1,23 +1,20 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import VueButton from '@/components/VueButton.vue'
-import VueInput from '@/components/VueInput.vue'
 
-const name = ref('')
-const lastname = ref('')
-
-function handleSubmit(event: SubmitEvent) {
-  event.preventDefault()
-}
+const form = ref({ name: '', lastname: '' })
 </script>
 <template>
-  <form @onsubmit="handleSubmit">
-    <div class="flex flex-col mb-2 w-1/4">
-      <label>Name</label><VueInput placeholder="type a name" v-model="name" />
+  <div class="inline-flex w-full">
+    <div class="mb-2 w-2/6 p-4">
+      <div class="flex flex-col mb-2">
+        <label>Name</label><input placeholder="type a name" v-model="form.name" />
+      </div>
+      <div class="flex flex-col mb-2">
+        <label>Lastname</label><input placeholder="type a lastname" v-model="form.lastname" />
+      </div>
     </div>
-    <div class="flex flex-col mb-4 w-1/4">
-      <label>Lastname</label><VueInput placeholder="type a lastname" v-model="lastname" />
+    <div class="w-2/6 p-4">
+      <pre>{{ JSON.stringify(form) }}</pre>
     </div>
-    <VueButton type="submit">Submit</VueButton>
-  </form>
+  </div>
 </template>
