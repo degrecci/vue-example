@@ -52,7 +52,7 @@ const form = ref({
       </div>
     </div>
     <div class="w-2/6 p-4">
-      <pre>{{ JSON.stringify(form) }}</pre>
+      <pre class="whitespace-pre-wrap break-words">{{ JSON.stringify(form) }}</pre>
     </div>
   </div>
 </template>
