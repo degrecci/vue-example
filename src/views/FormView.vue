@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-const form = ref({ name: '', lastname: '', pick: '', checked: false, selected: '' })
+const form = ref({ name: '', lastname: '', pick: '', checked: false, selected: '', age: 0 })
 </script>
 <template>
   <div class="inline-flex w-full">
@@ -11,6 +11,9 @@ const form = ref({ name: '', lastname: '', pick: '', checked: false, selected: '
       </div>
       <div class="flex flex-col mb-2">
         <label>Lastname</label><input placeholder="type a lastname" v-model="form.lastname" />
+      </div>
+      <div class="flex flex-col mb-2">
+        <label>Age</label><input v-model.number="form.age" type="number" />
       </div>
       <div class="mb-2">
         <p>Pick:</p>
