@@ -1,7 +1,15 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-const form = ref({ name: '', lastname: '', pick: '', checked: false, selected: '', age: 0 })
+const form = ref({
+  name: '',
+  lastname: '',
+  pick: '',
+  checked: false,
+  selected: '',
+  age: 0,
+  message: ''
+})
 </script>
 <template>
   <div class="inline-flex w-full">
@@ -37,6 +45,10 @@ const form = ref({ name: '', lastname: '', pick: '', checked: false, selected: '
           <option value="b">B</option>
           <option value="c">C</option>
         </select>
+      </div>
+      <div class="mb-2">
+        <p>Message</p>
+        <textarea v-model="form.message" placeholder="add multiple lines"></textarea>
       </div>
     </div>
     <div class="w-2/6 p-4">
