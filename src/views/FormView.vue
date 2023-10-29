@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-const form = ref({ name: '', lastname: '', pick: '', checked: false })
+const form = ref({ name: '', lastname: '', pick: '', checked: false, selected: '' })
 </script>
 <template>
   <div class="inline-flex w-full">
@@ -25,6 +25,15 @@ const form = ref({ name: '', lastname: '', pick: '', checked: false })
         <p>Checkbox</p>
         <input type="checkbox" id="checkbox" v-model="form.checked" />
         <label for="checkbox">Check</label>
+      </div>
+      <div class="mb-2">
+        <p>Select</p>
+        <select v-model="form.selected">
+          <option value="">Select a option</option>
+          <option value="a">A</option>
+          <option value="b">B</option>
+          <option value="c">C</option>
+        </select>
       </div>
     </div>
     <div class="w-2/6 p-4">
