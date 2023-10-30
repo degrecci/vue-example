@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Input from '@/components/VueInput.vue'
 import { ref } from 'vue'
 
 const form = ref({
@@ -15,13 +16,13 @@ const form = ref({
   <div class="inline-flex w-full">
     <div class="mb-2 w-2/6 p-4">
       <div class="flex flex-col mb-2">
-        <label>Name</label><input placeholder="type a name" v-model="form.name" />
+        <label>Name</label><Input placeholder="type a name" v-model="form.name" />
       </div>
       <div class="flex flex-col mb-2">
-        <label>Lastname</label><input placeholder="type a lastname" v-model="form.lastname" />
+        <label>Lastname</label><Input placeholder="type a lastname" v-model="form.lastname" />
       </div>
       <div class="flex flex-col mb-2">
-        <label>Age</label><input v-model.number="form.age" type="number" />
+        <label>Age</label><Input v-model.number="form.age" type="number" />
       </div>
       <div class="mb-2">
         <p>Pick:</p>
