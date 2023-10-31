@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Input from '@/components/VueInput.vue'
 import TextArea from '@/components/VueTextArea.vue'
+import Label from '@/components/VueLabel.vue'
 import { ref } from 'vue'
 
 const form = ref({
@@ -17,30 +18,30 @@ const form = ref({
   <div class="inline-flex w-full">
     <div class="mb-2 w-2/6 p-4">
       <div class="flex flex-col mb-2">
-        <label>Name</label><Input placeholder="type a name" v-model="form.name" />
+        <Label>Name</Label><Input placeholder="type a name" v-model="form.name" />
       </div>
       <div class="flex flex-col mb-2">
-        <label>Lastname</label><Input placeholder="type a lastname" v-model="form.lastname" />
+        <Label>Lastname</Label><Input placeholder="type a lastname" v-model="form.lastname" />
       </div>
       <div class="flex flex-col mb-2">
-        <label>Age</label><Input v-model.number="form.age" type="number" />
+        <Label>Age</Label><Input v-model.number="form.age" type="number" />
       </div>
       <div class="mb-2">
-        <p>Pick:</p>
+        <Label class="block">Pick:</Label>
         <input type="radio" id="one" value="One" v-model="form.pick" />
-        <label for="one">One</label>
+        <Label for="one">One</Label>
         <input type="radio" id="two" value="Two" v-model="form.pick" />
-        <label for="Two">Two</label>
+        <Label for="Two">Two</Label>
         <input type="radio" id="three" value="Three" v-model="form.pick" />
-        <label for="Three">Three</label>
+        <Label for="Three">Three</Label>
       </div>
       <div class="mb-2">
-        <p>Checkbox</p>
+        <Label class="block">Checkbox</Label>
         <input type="checkbox" id="checkbox" v-model="form.checked" />
-        <label for="checkbox">Check</label>
+        <Label for="checkbox">Check</Label>
       </div>
       <div class="mb-2">
-        <p>Select</p>
+        <Label class="block">Select</Label>
         <select v-model="form.selected">
           <option value="">Select a option</option>
           <option value="a">A</option>
@@ -49,7 +50,7 @@ const form = ref({
         </select>
       </div>
       <div class="mb-2">
-        <p>Message</p>
+        <Label>Message</Label>
         <TextArea class="w-full" v-model="form.message" placeholder="add multiple lines"></TextArea>
       </div>
     </div>
