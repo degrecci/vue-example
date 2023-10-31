@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Input from '@/components/VueInput.vue'
+import TextArea from '@/components/VueTextArea.vue'
 import { ref } from 'vue'
 
 const form = ref({
@@ -49,7 +50,7 @@ const form = ref({
       </div>
       <div class="mb-2">
         <p>Message</p>
-        <textarea v-model="form.message" placeholder="add multiple lines"></textarea>
+        <TextArea class="w-full" v-model="form.message" placeholder="add multiple lines"></TextArea>
       </div>
     </div>
     <div class="w-2/6 p-4">
