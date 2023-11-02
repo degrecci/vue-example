@@ -10,5 +10,6 @@ function increment() {
 </script>
 
 <template>
-  <Button @click="increment"> Count is: {{ count }} </Button>
+  <Button @click="increment">Increment</Button>
+  <p>Count is: {{ count }}</p>
 </template>
