@@ -45,7 +45,7 @@ function removeTodo(todo: Todo) {
     >
       <input type="checkbox" v-model="todo.done" />
       <span :class="{ 'line-through': todo.done }">{{ todo.text }}</span
-      ><Button @click="removeTodo(todo)" variant="small"> X </Button>
+      ><Button @click="removeTodo(todo)" variant="small" aria-label="remove-item"> X </Button>
     </li>
   </ul>
   <Button @click="hideCompleted = !hideCompleted">
