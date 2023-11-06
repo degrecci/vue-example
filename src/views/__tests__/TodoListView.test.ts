@@ -28,4 +28,18 @@ describe('TodoListView', () => {
     expect(screen.getByText(/react/i)).toBeInTheDocument()
     expect(screen.getByText(/new item/i)).toBeInTheDocument()
   })
+
+  it('should show line through checked items and hide then with click on hide completed button', async () => {
+    render(TodoListViewVue)
+
+    expect(screen.getByText(/vue/i)).toHaveClass('line-through')
+
+    await fireEvent.click(screen.getByText(/hide completed/i))
+
+    expect(screen.queryByText(/vue/i)).not.toBeInTheDocument()
+
+    await fireEvent.click(screen.getByText(/show all/i))
+
+    expect(screen.getByText(/vue/i)).toHaveClass('line-through')
+  })
 })
