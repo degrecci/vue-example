@@ -8,7 +8,7 @@ import OnMountedView from '@/views/OnMountedView.vue'
 import SlotsView from '@/views/SlotsView.vue'
 import TextInputView from '@/views/TextInputView.vue'
 import TodoListView from '@/views/TodoListView.vue'
-import ToogleView from '@/views/ToogleView.vue'
+import ToggleView from '@/views/ToggleView.vue'
 
 const routes = [
   // { path: '/', component: Home },
@@ -19,7 +19,7 @@ const routes = [
   { path: '/fetch', component: FetchView },
   { path: '/define-props', component: DefinePropsView },
   { path: '/slots', component: SlotsView },
-  { path: '/toggle', component: ToogleView },
+  { path: '/toggle', component: ToggleView },
   { path: '/form', component: FormView }
 ]
 
