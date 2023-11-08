@@ -15,4 +15,23 @@ describe('FormView', () => {
       '{"name":"John","lastname":"Doe","pick":"","checked":false,"selected":"","age":24,"message":""}'
     )
   })
+
+  it('should update infos when change radio and checkbox fields', async () => {
+    render(FormView)
+
+    await fireEvent.click(
+      screen.getByRole('radio', {
+        name: /one/i
+      })
+    )
+    await fireEvent.click(
+      screen.getByRole('checkbox', {
+        name: /check/i
+      })
+    )
+
+    expect(screen.getByTestId('form-values').firstChild).toMatchInlineSnapshot(
+      '{"name":"","lastname":"","pick":"One","checked":true,"selected":"","age":0,"message":""}'
+    )
+  })
 })
