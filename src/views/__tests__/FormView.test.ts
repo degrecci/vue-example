@@ -34,4 +34,15 @@ describe('FormView', () => {
       '{"name":"","lastname":"","pick":"One","checked":true,"selected":"","age":0,"message":""}'
     )
   })
+
+  it('should update infos when change select and textarea fields', async () => {
+    render(FormView)
+
+    await fireEvent.update(screen.getByRole('combobox'), 'c')
+    await fireEvent.update(screen.getByPlaceholderText(/add multiple lines/i), 'lorem ipsum')
+
+    expect(screen.getByTestId('form-values').firstChild).toMatchInlineSnapshot(
+      '{"name":"","lastname":"","pick":"","checked":false,"selected":"c","age":0,"message":"lorem ipsum"}'
+    )
+  })
 })
