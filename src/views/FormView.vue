@@ -24,7 +24,7 @@ const form = ref({
         <Label>Lastname</Label><Input placeholder="type a lastname" v-model="form.lastname" />
       </div>
       <div class="flex flex-col mb-2">
-        <Label>Age</Label><Input v-model.number="form.age" type="number" />
+        <Label>Age</Label><Input placeholder="type a age" v-model.number="form.age" type="number" />
       </div>
       <div class="mb-2">
         <Label class="block">Pick:</Label>
@@ -55,7 +55,9 @@ const form = ref({
       </div>
     </div>
     <div class="w-2/6 p-4">
-      <pre class="whitespace-pre-wrap break-words">{{ JSON.stringify(form) }}</pre>
+      <pre class="whitespace-pre-wrap break-words" data-testid="form-values">{{
+        JSON.stringify(form)
+      }}</pre>
     </div>
   </div>
 </template>
